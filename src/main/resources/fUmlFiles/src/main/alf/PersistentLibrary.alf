@@ -1,0 +1,6 @@
+
+package PersistentLibrary {
+
+    public abstract class Persistent;
+    
+}

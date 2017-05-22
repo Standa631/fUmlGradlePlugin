@@ -1,0 +1,6 @@
+
+package ActivityLibrary {
+
+    public abstract class Activity;
+
+}

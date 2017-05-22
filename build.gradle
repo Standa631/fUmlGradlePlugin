@@ -1,0 +1,29 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    compileOnly gradleApi()
+    compileOnly localGroovy()
+
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
+
+repositories {
+    mavenCentral()
+}
+ 
+group='net.belehradek.fuml.gradle'
+version='0.1'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../repo'))
+        }
+    }
+}
+
+jar {
+	from { configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } } 
+}
+

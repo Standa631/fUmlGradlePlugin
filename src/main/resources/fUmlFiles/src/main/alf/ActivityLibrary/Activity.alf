@@ -1,0 +1,16 @@
+namespace ActivityLibrary;
+
+abstract class Activity {
+
+	public startActivity(in toStart: Activity, in params: String[*]) {
+		WriteLine("Start activity!");
+	}
+
+	public onStart() {
+		WriteLine("Activity start!");
+	}
+
+	public onExit() {
+		WriteLine("Activity exit!");
+	}
+} 

@@ -1,0 +1,16 @@
+public import ActivityLibrary::Activity;
+
+active class App {
+
+} do {
+    WriteLine("App start");
+
+    WriteLine("App end");
+}
+
+
+
+
+
+
+
